@@ -2,7 +2,7 @@
 
 SKETCHBOOK=sketches
 TMP=tmp
-NAME=scanner3d-papart
+NAME=scanner3d
 
 VERSION=0.1
 

@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>tech.lity.rea</groupId>
-    <artifactId>scanner3d-papart</artifactId>
+    <artifactId>scanner3d</artifactId>
     <version>0.1</version>
     <packaging>jar</packaging>
 
