@@ -43,7 +43,7 @@
     <developers>
         <developer>
             <name>Jeremy Laviole</name>
-            <email>jeremy.laviole@inria.fr</email>
+            <email>laviole@rea.lity.tech</email>
         </developer>
     </developers>
     
@@ -54,6 +54,13 @@
         <javacpp.version>1.4</javacpp.version>
     </properties>
   
+    <distributionManagement>
+        <repository>
+            <id>public</id>
+            <url>http://forum.rea.lity.tech:8081/repository/public/</url>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
         
         <dependency>
@@ -90,39 +97,15 @@
         <sourceDirectory>src</sourceDirectory>
         <testSourceDirectory>test</testSourceDirectory>
         <outputDirectory>target/classes</outputDirectory>
-        <extensions>
-            <!-- Enabling the use of FTP -->
-            <extension>
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-ftp</artifactId>
-                <version>3.0.0</version>
-            </extension>
-        </extensions>
         
         <plugins> 
-            <plugin>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.3</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>copy-dependencies</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.build.directory}</outputDirectory>
-                            <stripVersion>true</stripVersion>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.3.2</version>
-                <configuration>
+<!--                <configuration>
                     <finalName>scannerPapart</finalName>                   
-                </configuration>
+                </configuration>-->
             </plugin>  
         
             <plugin>
@@ -134,7 +117,8 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-            <!--            <plugin>
+            
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
                 <version>1.5</version>
@@ -147,20 +131,8 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>-->
+            </plugin>
         </plugins>
-        
-        <resources>
-            
-            <resource>
-                <directory>src</directory>
-                <includes>
-                    <include>**/*.vert</include>
-                    <include>**/*.frag</include>
-                    <include>**/*.glsl</include>
-                </includes>
-            </resource>
-        </resources>
     </build>
     
   
