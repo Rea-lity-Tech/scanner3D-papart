@@ -8,9 +8,22 @@ You can download the [library for Processing](https://github.com/Rea-lity-Tech/s
 
 
 ``` xml
+
+     <repository>
+            <id>public</id>
+            <name>RealityTech public repository</name>
+            <url>http://forum.rea.lity.tech:8081/repository/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+
+...
+
 <dependency>
   <groupId>tech.lity.rea</groupId>
   <artifactId>scanner3d-papart</artifactId>
   <version>0.1</version>
 </dependency>
+
 ```
